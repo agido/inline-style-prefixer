@@ -20,7 +20,6 @@ Thumbs.db
 *.vi
 
 /static
-/dynamic
 /utils
 /generator
 node_modules/
