@@ -19,9 +19,6 @@ Thumbs.db
 *.sw?
 *.vi
 
-/static
-/utils
-/generator
 node_modules/
 npm-debug.log
 coverage
