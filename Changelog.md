@@ -1,6 +1,11 @@
 # Changelog
 
 ## 4.0
+### 4.0.0mod
+* agido modification
+* `createPrefixer` doesn't check `this._hasPropsRequiringPrefix`, otherwise plugins(e.g. position) won't be loaded
+* build of inline-style-prefixer (added: dynamic, static, utils, generator, dist)
+* Benchmarks added for agido solution
 
 ### 4.0.0
 * prefixed style objects are now reordered correctly [#147](https://github.com/rofrischmann/inline-style-prefixer/issues/147) )
