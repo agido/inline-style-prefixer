@@ -1,6 +1,6 @@
 import { Suite } from 'benchmark'
 import beautifyBenchmark from 'beautify-benchmark'
-import { static302, static301, static300, static205 } from './cases'
+import { static302, static301, static300, static205, static400 } from './cases'
 
 export const run = () => {
   console.log('Running static test.')
@@ -11,6 +11,7 @@ export const run = () => {
   testSuite.add('3.0.0', () => static300())
   testSuite.add('3.0.1', () => static301())
   testSuite.add('3.0.2', () => static302())
+  testSuite.add('4.0.0', () => static400())
 
   testSuite.on('cycle', (e) => {
     beautifyBenchmark.add(e.target)

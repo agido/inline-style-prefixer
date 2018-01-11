@@ -53,9 +53,6 @@ export default function createPrefixer(
             this._requiresPrefix[property] = true
           }
         }
-
-        this._hasPropsRequiringPrefix =
-          Object.keys(this._requiresPrefix).length > 0
       } else {
         this._useFallback = true
       }
@@ -74,11 +71,6 @@ export default function createPrefixer(
       // use static prefixer as fallback if userAgent can not be resolved
       if (this._useFallback) {
         return fallback(style)
-      }
-
-      // only add prefixes if needed
-      if (!this._hasPropsRequiringPrefix) {
-        return style
       }
 
       return this._prefixStyle(style)

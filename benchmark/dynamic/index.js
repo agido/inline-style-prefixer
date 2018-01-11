@@ -1,6 +1,6 @@
 import { Suite } from 'benchmark'
 import beautifyBenchmark from 'beautify-benchmark'
-import { dynamic205, dynamic300, dynamic301, dynamic302 } from './cases'
+import { dynamic205, dynamic300, dynamic301, dynamic302, dynamic400, dynamic400mod} from './cases'
 
 export const run = () => {
   console.log('Running dynamic test.')
@@ -11,6 +11,8 @@ export const run = () => {
   testSuite.add('3.0.0', () => dynamic300())
   testSuite.add('3.0.1', () => dynamic301())
   testSuite.add('3.0.2', () => dynamic301())
+  testSuite.add('4.0.0', () => dynamic400())
+  testSuite.add('4.0.0mod', () => dynamic400mod())
 
   testSuite.on('cycle', (e) => {
     beautifyBenchmark.add(e.target)
